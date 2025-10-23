@@ -2,20 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import {
-  CheckCircle2,
-  Zap,
-  Target,
-  TrendingUp,
-  Video,
-  Sparkles,
-  Users,
-  Clock,
-  ArrowRight,
-  Menu,
-  X,
-  Link,
-} from "lucide-react"
+import { CheckCircle2, Zap, Target, TrendingUp, Video, Sparkles, Users, Clock, ArrowRight, Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
 import { LoadingSpinner } from "@/components/loading-spinner"
 import { useInView } from "@/hooks/use-in-view"
@@ -77,8 +64,8 @@ export default function Home() {
       {isLoading && <LoadingSpinner />}
 
       {/* Navigation */}
-      <nav className="fixed top-4 left-4 right-4 z-50 bg-zinc-950/40 backdrop-blur-2xl border border-zinc-800/40 rounded-2xl shadow-2xl">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+      <nav className="fixed top-4 left-4 right-4 z-50 bg-zinc-950/40 backdrop-blur-2xl border border-zinc-800/40 rounded-full shadow-2xl">
+        <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4">
           {/* Logo and Branding - Left */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <img src="/logo-new.jpg" alt="Content Craft" className="h-8 w-auto" />
@@ -111,7 +98,7 @@ export default function Home() {
                     scrollToSection(item.id)
                   }
                 }}
-                className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                   activeSection === item.id
                     ? "bg-zinc-800/80 text-zinc-50 shadow-lg shadow-zinc-950/50"
                     : "text-zinc-300 hover:text-zinc-50 hover:bg-zinc-800/40"
@@ -134,7 +121,7 @@ export default function Home() {
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button
               size="sm"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white hover:text-white hover:scale-110 transition-all shadow-lg font-semibold flex-shrink-0 hidden sm:flex rounded-full px-6"
+              className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-110 transition-all shadow-lg font-semibold flex-shrink-0 hidden sm:flex rounded-full px-6"
             >
               Contactez-Nous
             </Button>
@@ -143,7 +130,7 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-zinc-900/60 backdrop-blur-xl border-t border-zinc-800/50 py-4 rounded-b-2xl">
+          <div className="md:hidden bg-zinc-900/60 backdrop-blur-xl border-t border-zinc-800/50 py-3 rounded-b-2xl">
             <div className="container mx-auto px-4 flex flex-col gap-2">
               {[
                 { id: "hero", label: "Accueil" },
@@ -161,7 +148,7 @@ export default function Home() {
                       scrollToSection(item.id)
                     }
                   }}
-                  className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 text-left ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-left ${
                     activeSection === item.id
                       ? "bg-zinc-800/80 text-zinc-50"
                       : "text-zinc-300 hover:text-zinc-50 hover:bg-zinc-800/40"
@@ -173,7 +160,7 @@ export default function Home() {
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button
                   size="sm"
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white w-full mt-2 font-semibold rounded-full hover:scale-105 transition-all"
+                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white w-full mt-2 font-semibold rounded-full hover:scale-105 transition-all"
                 >
                   Contactez-Nous
                 </Button>
@@ -216,7 +203,7 @@ export default function Home() {
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 hover:shadow-2xl transition-all font-bold group w-full sm:w-auto"
+                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 hover:shadow-2xl transition-all font-bold group w-full sm:w-auto rounded-full"
                 >
                   Contactez-Nous
                   <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -417,9 +404,9 @@ export default function Home() {
                       {service.highlight && (
                         <Button
                           size="lg"
-                          className="w-full bg-zinc-950 text-zinc-50 hover:bg-zinc-800 hover:scale-105 transition-all font-bold shadow-lg text-sm sm:text-base mt-6 sm:mt-8"
+                          className="w-full bg-zinc-950 text-zinc-50 hover:bg-zinc-800 hover:scale-105 transition-all font-bold shadow-lg text-sm sm:text-base mt-6 sm:mt-8 rounded-full"
                         >
-                          Commencer maintenant
+                          Commencer Maintenant
                         </Button>
                       )}
                     </div>
@@ -609,34 +596,34 @@ export default function Home() {
               Si vous cherchez un partenaire fiable pour booster votre image de marque et d'accroître vos parts de
               marché, cet appel est le point de départ.
             </p>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-block transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ transitionDelay: ctaInView ? "200ms" : "0ms" }}
-            >
-              <Button
-                size="lg"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 transition-all font-bold shadow-2xl group w-full sm:w-auto"
+            <div className="flex flex-col gap-4 items-center">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-block transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: ctaInView ? "200ms" : "0ms" }}
               >
-                Discutons Votre Projet !
-                <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
-            <Link
-              href="/portfolio"
-              className={`inline-block transition-all duration-1000 lg:hidden ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ transitionDelay: ctaInView ? "300ms" : "0ms" }}
-            >
-              <Button
-                size="lg"
-                className="bg-black hover:bg-zinc-900 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 transition-all font-bold shadow-2xl group w-full sm:w-auto"
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 transition-all font-bold shadow-2xl group w-full sm:w-auto rounded-full"
+                >
+                  Discutons Votre Projet !
+                </Button>
+              </a>
+              <a
+                href="/portfolio"
+                className={`inline-block transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: ctaInView ? "300ms" : "0ms" }}
               >
-                Découvrir Notre Portefeuille
-                <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+                <Button
+                  size="sm"
+                  className="bg-black hover:bg-zinc-900 text-white text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 hover:scale-105 transition-all font-bold shadow-lg group rounded-full"
+                >
+                  Découvrir Notre Portefeuille
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

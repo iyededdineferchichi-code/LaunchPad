@@ -30,8 +30,8 @@ export default function PortfolioPage() {
 
   const portfolioVideos = [
     {
-      title: "Vidéo 1",
-      src: "/video-2.mp4",
+      title: "Miro App",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Miro%20App-Yh64lG4gLmb0PCyZPHBNcjakTixKCE.mp4",
       description: "Montage professionnel avec transitions fluides",
     },
     {
@@ -50,13 +50,13 @@ export default function PortfolioPage() {
       description: "Émotion et authenticité au cœur du message",
     },
     {
-      title: "Projet 5",
-      src: "/professional-video-editing-example-.jpg",
+      title: "Faculty Hustle",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Faculty%20hustle-gc2AmNFj1O90wA5jsd4ioJhUss85B7.mp4",
       description: "Édition vidéo professionnelle de haut niveau",
     },
     {
-      title: "Projet 6",
-      src: "/professional-video-editing-example-.jpg",
+      title: "Trust",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trust-XSDipa4B7foruzps3zDlZZZWkpiI7j.mp4",
       description: "Montage créatif et innovant",
     },
   ]
@@ -65,8 +65,8 @@ export default function PortfolioPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-50">
       {isLoading && <LoadingSpinner />}
 
-      <nav className="fixed top-4 left-4 right-4 z-50 bg-zinc-950/40 backdrop-blur-2xl border border-zinc-800/40 rounded-2xl shadow-2xl">
-        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
+      <nav className="fixed top-4 left-4 right-4 z-50 bg-zinc-950/40 backdrop-blur-2xl border border-zinc-800/40 rounded-full shadow-2xl">
+        <div className="container mx-auto px-3 sm:px-4 py-1.5 sm:py-2 flex items-center justify-between gap-2 sm:gap-4">
           <Link
             href="/"
             className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity flex-shrink-0"
@@ -108,8 +108,8 @@ export default function PortfolioPage() {
               Aperçu de Notre Portefeuille
             </h2>
             <p className="text-base sm:text-lg text-zinc-400 text-pretty leading-relaxed">
-              Découvrez tous les projets vidéo que nous avons réalisés. Chaque vidéo représente notre engagement envers
-              la qualité, la créativité et l'impact.
+              Découvrez quelques projets que nous avons réalisés. Chaque vidéo représente notre engagement envers la
+              qualité, la créativité et l'impact.
             </p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function PortfolioPage() {
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {portfolioVideos.map((video, index) => (
               <Card
                 key={index}
@@ -185,7 +185,7 @@ export default function PortfolioPage() {
               className={`inline-block transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: ctaInView ? "200ms" : "0ms" }}
             >
-              <Button className="bg-cyan-500 hover:bg-cyan-600 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 transition-all font-bold shadow-2xl">
+              <Button className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 transition-all font-bold shadow-2xl rounded-full">
                 Discutons Votre Projet !
               </Button>
             </a>
