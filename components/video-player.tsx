@@ -1,8 +1,7 @@
 "use client"
 
 import React from "react"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Play } from "lucide-react"
 
 interface VideoPlayerProps {
@@ -15,6 +14,15 @@ export function VideoPlayer({ src, title, description }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [showControls, setShowControls] = useState(false)
   const videoRef = React.useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    if (isPlaying && videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Handle autoplay policy restrictions
+        console.log("[v0] Video autoplay prevented by browser policy")
+      })
+    }
+  }, [isPlaying])
 
   const handlePlayClick = () => {
     setIsPlaying(true)
@@ -38,7 +46,6 @@ export function VideoPlayer({ src, title, description }: VideoPlayerProps) {
           ref={videoRef}
           src={src}
           className="w-full h-full object-contain cursor-pointer"
-          autoPlay
           playsInline
           controls={false}
           onPlay={() => setShowControls(true)}
@@ -58,7 +65,7 @@ export function VideoPlayer({ src, title, description }: VideoPlayerProps) {
                 onClick={handlePlayClick}
                 className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 rounded-full bg-cyan-500 hover:bg-cyan-600 flex items-center justify-center mb-2 sm:mb-3 md:mb-4 mx-auto transition-all hover:scale-110 shadow-lg flex-shrink-0"
               >
-                <Play className="w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-white ml-0.5 sm:ml-1" />
+                <Play className="w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:w-7 text-white ml-0.5 sm:ml-1" />
               </button>
               <h3 className="text-sm sm:text-base md:text-lg font-bold text-white mb-1 sm:mb-2 px-2 line-clamp-2">
                 {title}

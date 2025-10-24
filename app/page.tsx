@@ -112,7 +112,7 @@ export default function Home() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-zinc-900/60 rounded-lg transition-colors"
+            className="md:hidden ml-auto p-2 hover:bg-zinc-900/60 rounded-lg transition-colors"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
