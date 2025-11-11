@@ -26,7 +26,9 @@ export default function PortfolioPage() {
   }, [])
 
   const whatsappLink =
-    "https://wa.me/21628119128?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20vidéo"
+    "https://wa.me/21628119128?text=Bonjour%2C%20je%20souhaite%20discuter%20avec%20vous%20de%20ma%20stratégie%20de%20contenu."
+
+  const calendlyLink = "https://calendly.com/iyedferchichi394/30min"
 
   const portfolioVideos = [
     {
@@ -129,7 +131,7 @@ export default function PortfolioPage() {
             {portfolioVideos.map((video, index) => (
               <Card
                 key={index}
-                className={`group relative overflow-hidden bg-zinc-900 border-2 border-zinc-800 hover:border-cyan-500 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 transform ${gridInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                className={`group relative overflow-hidden bg-zinc-950 border-2 border-zinc-800 hover:border-cyan-500 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 transform ${gridInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{
                   transitionDelay: gridInView ? `${index * 100}ms` : "0ms",
                 }}
@@ -179,7 +181,7 @@ export default function PortfolioPage() {
               génèrent des résultats.
             </p>
             <a
-              href={whatsappLink}
+              href={calendlyLink}
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-block transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}

@@ -20,7 +20,9 @@ export default function Home() {
   const { ref: ctaRef, isInView: ctaInView } = useInView()
 
   const whatsappLink =
-    "https://wa.me/21628119128?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20vidéo"
+    "https://wa.me/21628119128?text=Bonjour%2C%20je%20souhaite%20discuter%20avec%20vous%20de%20ma%20stratégie%20de%20contenu."
+
+  const calendlyLink = "https://calendly.com/iyedferchichi394/30min"
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -498,7 +500,7 @@ export default function Home() {
       <section
         id="about"
         ref={aboutRef}
-        className="py-12 sm:py-24 bg-gradient-to-b from-zinc-900 to-zinc-950 relative overflow-hidden"
+        className="py-12 sm:py-24 bg-gradient-to-b from-zinc-950 to-zinc-950 relative overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
           <img
@@ -598,7 +600,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col gap-4 items-center">
               <a
-                href={whatsappLink}
+                href={calendlyLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`inline-block transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
