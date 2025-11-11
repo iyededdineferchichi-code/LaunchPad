@@ -1,13 +1,12 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import { VideoPlayer } from "@/components/video-player"
 import { LoadingSpinner } from "@/components/loading-spinner"
-import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { useInView } from "@/hooks/use-in-view"
+import { ArrowLeft } from "lucide-react"
 
 export default function PortfolioPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -97,7 +96,7 @@ export default function PortfolioPage() {
           <img
             src="/creative-video-production-studio.jpg"
             alt="Video production studio"
-            className="w-full h-full object-cover opacity-5"
+            className="w-full h-full object-cover opacity-[0.02]"
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -123,31 +122,25 @@ export default function PortfolioPage() {
           <img
             src="/workflow-diagram-creative-process.jpg"
             alt="Creative workflow"
-            className="w-full h-full object-cover opacity-5"
+            className="w-full h-full object-cover opacity-[0.02]"
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {portfolioVideos.map((video, index) => (
-              <Card
+              <div
                 key={index}
-                className={`group relative overflow-hidden bg-zinc-950 border-2 border-zinc-800 hover:border-cyan-500 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 transform ${gridInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                className={`group relative overflow-hidden rounded-xl border-2 border-zinc-800 aspect-[9/16] transition-all duration-200 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] hover:border-cyan-500/50 transform ${gridInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{
                   transitionDelay: gridInView ? `${index * 100}ms` : "0ms",
                 }}
               >
-                <div className="aspect-[9/16] overflow-hidden bg-zinc-950 w-full">
-                  {video.src.endsWith(".mp4") ? (
-                    <VideoPlayer src={video.src} title={video.title} description={video.description} />
-                  ) : (
-                    <img
-                      src={video.src || "/placeholder.svg"}
-                      alt={video.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  )}
-                </div>
-              </Card>
+                {video.src.endsWith(".mp4") ? (
+                  <VideoPlayer src={video.src} title={video.title} description={video.description} />
+                ) : (
+                  <img src={video.src || "/placeholder.svg"} alt={video.title} className="w-full h-full object-cover" />
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -162,7 +155,7 @@ export default function PortfolioPage() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover opacity-35"
+            className="w-full h-full object-cover opacity-[0.15]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/80 to-zinc-950" />
         </div>
