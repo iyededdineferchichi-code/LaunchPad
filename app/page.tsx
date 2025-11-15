@@ -196,13 +196,13 @@ export default function Home() {
             <h1 className="text-3xl lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance sm:text-6xl md:text-9xl">
               Renforcez Votre Marque, <span className="text-zinc-50">Faire Bouger Votre Business</span>
             </h1>
-            <p className="md:text-2xl text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold text-base sm:text-2xl">
+            <p className="text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold text-base sm:text-2xl md:text-4xl">
               Prêt à exploser vos résultats grâce à un contenu qui convertit vraiment ?
             </p>
-            <p className="md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-10 leading-5 font-bold text-xl">
+            <p className="text-zinc-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-10 leading-5 font-bold text-xl md:text-3xl">
               Voyons ensemble comment en faire une vraie force pour votre marque.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center tracking-normal">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   size="lg"
@@ -214,7 +214,7 @@ export default function Home() {
               </a>
               <div className="flex flex-row items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base text-zinc-100 font-medium px-2">
                 <Clock className="w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5 flex-shrink-0" />
-                <span className="whitespace-nowrap mx-px text-left tracking-tight">Seulement 5 places par mois - passez à l&#39;action !</span>
+                <span className="whitespace-nowrap mx-px text-left tracking-tight text-xl">Seulement 5 places par mois - passez à l&#39;action !</span>
               </div>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-6 sm:mb-16">
             <h2
-              className={`text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 ${valueInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`text-2xl sm:text-4xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 md:text-6xl ${valueInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Pourquoi la vidéo est essentielle
             </h2>
@@ -262,10 +262,10 @@ export default function Home() {
                     <span className="text-cyan-400 font-bold text-[10px] sm:text-base md:text-lg">1</span>
                   </div>
                   <div>
-                    <h5 className="md:text-xl font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-xl">
+                    <h5 className="font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-4xl">
                       Engagement explosif
                     </h5>
-                    <p className="md:text-base text-zinc-400 leading-tight text-left sm:text-base">
+                    <p className="text-zinc-400 leading-tight text-left sm:text-base md:text-2xl">
                       Les vidéos sont partagées 12× plus que les textes ou images.
                     </p>
                   </div>
@@ -276,10 +276,10 @@ export default function Home() {
                     <span className="text-cyan-400 font-bold text-[10px] sm:text-base md:text-lg">2</span>
                   </div>
                   <div>
-                    <h5 className="md:text-xl font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-xl">
+                    <h5 className="font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-4xl">
                       Conversion directe
                     </h5>
-                    <p className="md:text-base text-zinc-400 leading-tight text-base">
+                    <p className="text-zinc-400 leading-tight text-base md:text-2xl">
                       Une vidéo peut augmenter vos ventes jusqu'à 80 %.
                     </p>
                   </div>
@@ -290,10 +290,10 @@ export default function Home() {
                     <span className="text-cyan-400 font-bold text-[10px] sm:text-base md:text-lg">3</span>
                   </div>
                   <div>
-                    <h5 className="md:text-xl font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-xl">
+                    <h5 className="font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-4xl">
                       Crédibilité instantanée
                     </h5>
-                    <p className="md:text-base text-zinc-400 leading-tight sm:text-base">
+                    <p className="text-zinc-400 leading-tight sm:text-base md:text-2xl">
                       Les spectateurs retiennent 95 % du message en vidéo.
                     </p>
                   </div>
@@ -335,10 +335,10 @@ export default function Home() {
                 <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <item.icon className="w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-zinc-50" />
                 </div>
-                <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 text-zinc-50 leading-tight text-center">
+                <h3 className="text-sm sm:text-lg font-bold mb-2 sm:mb-3 text-zinc-50 leading-tight text-center md:text-2xl">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed text-center">{item.description}</p>
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed text-center md:text-xl">{item.description}</p>
               </Card>
             ))}
           </div>
@@ -361,12 +361,12 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-6 sm:mb-16">
             <h2
-              className={`text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 tracking-tight ${servicesInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`text-2xl sm:text-4xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 tracking-tight md:text-6xl ${servicesInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Notre Offre Stratégique
             </h2>
             <p
-              className={`text-sm sm:text-base md:text-lg text-zinc-400 text-pretty transition-all duration-1000 ${servicesInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`text-sm sm:text-base text-zinc-400 text-pretty transition-all duration-1000 md:text-xl ${servicesInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: "100ms" }}
             >
               Une offre complète et flexible qui s'adapte à vos besoins.
@@ -452,12 +452,12 @@ export default function Home() {
                         {service.badge}
                       </div>
                       <h3
-                        className={`text-sm sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight ${service.highlight ? "text-zinc-950" : "text-zinc-50"}`}
+                        className={`text-sm sm:text-xl font-bold mb-2 sm:mb-3 leading-tight md:text-3xl ${service.highlight ? "text-zinc-950" : "text-zinc-50"}`}
                       >
                         {service.title}
                       </h3>
                       <p
-                        className={`text-[10px] sm:text-sm md:text-base mb-3 sm:mb-6 leading-relaxed ${service.highlight ? "text-zinc-950/70" : "text-zinc-400"}`}
+                        className={`sm:text-sm mb-3 sm:mb-6 leading-relaxed md:text-lg ${service.highlight ? "text-zinc-950/70" : "text-zinc-400"}`}
                       >
                         {service.description}
                       </p>
@@ -468,7 +468,7 @@ export default function Home() {
                               className={`w-4 sm:w-5 h-4 sm:h-5 mt-0.5 flex-shrink-0 ${service.highlight ? "text-zinc-950" : "text-zinc-400"}`}
                             />
                             <span
-                              className={`text-[9px] sm:text-sm md:text-sm leading-snug ${service.highlight ? "font-medium text-zinc-950" : "text-zinc-300"}`}
+                              className={`sm:text-sm leading-snug md:text-base ${service.highlight ? "font-medium text-zinc-950" : "text-zinc-300"}`}
                             >
                               {item}
                             </span>
@@ -504,12 +504,12 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-6 sm:mb-16">
             <h2
-              className={`text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 ${processInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`text-2xl sm:text-4xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 md:text-6xl ${processInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Notre Démarche
             </h2>
             <p
-              className={`text-sm sm:text-base md:text-lg text-zinc-400 text-pretty leading-relaxed transition-all duration-1000 ${processInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`text-sm sm:text-base text-zinc-400 text-pretty leading-relaxed transition-all duration-1000 md:text-xl ${processInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: "100ms" }}
             >
               Une collaboration simple et efficace, pensée pour vous faire gagner du temps.
@@ -553,12 +553,12 @@ export default function Home() {
                   style={{ transitionDelay: processInView ? `${step.delay}ms` : "0ms" }}
                 >
                   <div className="flex gap-3 sm:gap-6 items-start">
-                    <div className="text-2xl sm:text-4xl md:text-5xl font-bold text-zinc-50 flex-shrink-0 group-hover:text-zinc-200 transition-colors">
+                    <div className="text-2xl sm:text-4xl font-bold text-zinc-50 flex-shrink-0 group-hover:text-zinc-200 transition-colors md:text-6xl">
                       {step.number}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-1 sm:mb-3 text-zinc-50">{step.title}</h3>
-                      <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed">{step.description}</p>
+                      <h3 className="text-base sm:text-xl font-bold mb-1 sm:mb-3 text-zinc-50 md:text-4xl">{step.title}</h3>
+                      <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed md:text-xl">{step.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -585,7 +585,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-6 sm:mb-12">
               <h2
-                className={`text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-8 text-balance text-zinc-50 transition-all duration-1000 ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                className={`text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-balance text-zinc-50 transition-all duration-1000 md:text-6xl ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               >
                 À propos
               </h2>
