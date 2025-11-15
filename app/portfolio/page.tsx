@@ -66,8 +66,9 @@ export default function PortfolioPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-50">
       {isLoading && <LoadingSpinner />}
 
+      {/* Navigation Bar */}
       <nav className="fixed top-4 left-4 right-4 z-50 bg-zinc-950/40 backdrop-blur-2xl border border-zinc-800/40 rounded-full shadow-2xl">
-        <div className="container mx-auto px-3 sm:px-4 py-1.5 sm:py-2 flex items-center justify-between gap-2 sm:gap-4">
+        <div className="container mx-auto px-3 sm:px-6 lg:px-8 py-1.5 sm:py-1 flex items-center justify-between gap-2 sm:gap-4">
           <Link
             href="/"
             className="flex items-center gap-1 sm:gap-2 text-white hover:text-cyan-400 transition-colors flex-shrink-0"
@@ -80,8 +81,9 @@ export default function PortfolioPage() {
 
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
             <Button 
-              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-2 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-sm hover:scale-110 transition-all">
-              Contactez-Nous
+              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-2.5 sm:px-4 py-1 sm:py-1 text-[9px] sm:text-sm hover:scale-110 transition-all">
+              <span className="sm:hidden">Contact</span>
+              <span className="hidden sm:inline">Contactez-Nous</span>
             </Button>
           </a>
         </div>
@@ -90,7 +92,7 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center pt-16 sm:pt-20"
+        className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center pt-24 sm:pt-28"
       >
         <div className="absolute inset-0 z-0">
           <img

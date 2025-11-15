@@ -123,7 +123,7 @@ export default function Home() {
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hidden lg:block">
             <Button
               size="default"
-              className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20 font-semibold flex-shrink-0 rounded-full px-2.5 py-1"
+              className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20 font-semibold flex-shrink-0 rounded-full px-2.5 py-0.5"
             >
               Contactez-Nous
             </Button>
@@ -193,10 +193,10 @@ export default function Home() {
           <div
             className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <h1 className="lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance text-4xl sm:text-7xl">
+            <h1 className="lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance text-6xl">
               Renforcez Votre Marque, <span className="text-zinc-50">Faire Bouger Votre Business</span>
             </h1>
-            <p className="text-base text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold sm:text-3xl">
+            <p className="text-base text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold sm:text-2xl">
               Prêt à exploser vos résultats grâce à un contenu qui convertit vraiment ?
             </p>
             <p className="sm:text-xl md:text-2xl text-zinc-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-10 leading-5 text-sm font-bold">
@@ -214,7 +214,7 @@ export default function Home() {
               </a>
               <div className="flex flex-row items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base text-zinc-100 font-medium px-2">
                 <Clock className="w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5 flex-shrink-0" />
-                <span className="text-left whitespace-nowrap mx-px">Seulement 5 places par mois - passez à l&#39;action !</span>
+                <span className="whitespace-nowrap mx-px text-left tracking-tight">Seulement 5 places par mois - passez à l&#39;action !</span>
               </div>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-6 sm:mb-16">
             <h2
-              className={`text-xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 ${valueInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 text-2xl sm:text-4xl ${valueInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Pourquoi la vidéo est essentielle
             </h2>
@@ -248,7 +248,8 @@ export default function Home() {
 
           <div className="mt-4 sm:mt-6">
             <div className="flex flex-row items-center justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-12">
-              <div className="relative group flex-shrink-0 w-[120px] sm:w-[240px] md:w-[300px] lg:w-[360px]">
+              {/* Made video bigger by increasing width values */}
+              <div className="relative group flex-shrink-0 w-[140px] sm:w-[280px] md:w-[340px] lg:w-[400px]">
                 <div className="aspect-[9/16] overflow-hidden rounded-xl border-2 border-zinc-800 bg-zinc-950 transition-all duration-300 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] hover:border-cyan-500/50">
                   <VideoPlayer src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LaunchPad-KVCWZBjZ9e2wy32ckPvigit0vWPiAw.mp4" />
                 </div>
@@ -330,8 +331,9 @@ export default function Home() {
                 className={`p-4 sm:p-6 md:p-8 bg-zinc-900 border-zinc-800 hover:border-zinc-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group transform ${valueInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{ transitionDelay: valueInView ? `${item.delay}ms` : "0ms" }}
               >
-                <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform text-center">
-                  <item.icon className="w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-zinc-50 text-center" />
+                {/* Centered icon by adding mx-auto and keeping text-center on container */}
+                <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform mx-auto">
+                  <item.icon className="w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-zinc-50" />
                 </div>
                 <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 text-zinc-50 leading-tight text-center">
                   {item.title}
@@ -359,7 +361,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-6 sm:mb-16">
             <h2
-              className={`text-xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 ${servicesInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 text-2xl tracking-tight sm:text-4xl ${servicesInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Notre Offre Stratégique
             </h2>
@@ -476,7 +478,7 @@ export default function Home() {
                       {service.highlight && (
                         <Button
                           size="lg"
-                          className="w-full bg-zinc-950 text-zinc-50 hover:bg-zinc-800 hover:scale-105 transition-all font-bold shadow-lg text-xs sm:text-base mt-4 sm:mt-8 rounded-full py-2 sm:py-3"
+                          className="w-full bg-zinc-950 text-zinc-50 hover:bg-zinc-800 hover:scale-105 transition-all font-bold shadow-lg group rounded-full text-xs sm:text-base mt-4 sm:mt-8"
                         >
                           Commencer Maintenant
                         </Button>
@@ -502,7 +504,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-6 sm:mb-16">
             <h2
-              className={`text-xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 ${processInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`md:text-5xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 text-2xl sm:text-4xl ${processInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Notre Démarche
             </h2>
@@ -583,7 +585,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-6 sm:mb-12">
               <h2
-                className={`text-xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-8 text-balance text-zinc-50 transition-all duration-1000 ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                className={`md:text-5xl font-bold mb-4 sm:mb-8 text-balance text-zinc-50 transition-all duration-1000 text-2xl sm:text-4xl ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               >
                 À propos
               </h2>
@@ -657,7 +659,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2
-              className={`text-xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-6 text-balance text-zinc-50 transition-all duration-1000 text-2xl sm:text-6xl ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Prêt à transformer votre contenu ?
             </h2>
@@ -678,7 +680,7 @@ export default function Home() {
               >
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20 font-bold group w-full sm:w-auto rounded-full text-sm sm:text-lg md:text-xl px-4 sm:px-4 md:px-5 py-2 sm:py-2 md:py-2.5"
+                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold rounded-full px-4 py-1.5 text-sm sm:text-lg md:text-xl"
                 >
                   Discutons Votre Projet !
                 </Button>
