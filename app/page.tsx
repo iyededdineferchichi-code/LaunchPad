@@ -123,7 +123,7 @@ export default function Home() {
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hidden lg:block">
             <Button
               size="default"
-              className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20 font-semibold flex-shrink-0 rounded-full px-6 py-2"
+              className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20 font-semibold flex-shrink-0 rounded-full px-2.5 py-1"
             >
               Contactez-Nous
             </Button>
@@ -137,7 +137,7 @@ export default function Home() {
               {[
                 { id: "hero", label: "Accueil" },
                 { id: "services", label: "Offre" },
-                { id: "portfolio", label: "Portefeuille", href: "/portfolio" },
+                { id: "portfolio", label: "Portefeuille", href: "/portfolio", smallText: true },
                 { id: "process", label: "Démarche" },
                 { id: "about", label: "À propos" },
               ].map((item) => (
@@ -151,7 +151,7 @@ export default function Home() {
                     }
                     setMobileMenuOpen(false)
                   }}
-                  className={`px-6 py-3 text-left text-base font-medium transition-colors ${
+                  className={`px-6 py-3 text-left ${item.smallText ? 'text-sm' : 'text-base'} font-medium transition-colors ${
                     activeSection === item.id
                       ? "bg-zinc-800/60 text-zinc-50"
                       : "text-zinc-300 hover:text-zinc-50 hover:bg-zinc-800/30"
@@ -164,7 +164,7 @@ export default function Home() {
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="block">
                   <Button
                     size="default"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold rounded-full px-6 py-2"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold rounded-full px-4 py-1.5 text-sm"
                   >
                     Contactez-Nous
                   </Button>
@@ -193,20 +193,20 @@ export default function Home() {
           <div
             className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance">
+            <h1 className="lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance text-4xl sm:text-7xl">
               Renforcez Votre Marque, <span className="text-zinc-50">Faire Bouger Votre Business</span>
             </h1>
-            <p className="text-base sm:text-xl md:text-2xl text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-semibold">
+            <p className="text-base text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold sm:text-3xl">
               Prêt à exploser vos résultats grâce à un contenu qui convertit vraiment ?
             </p>
-            <p className="text-base sm:text-xl md:text-2xl text-zinc-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-10 font-medium">
+            <p className="sm:text-xl md:text-2xl text-zinc-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-10 leading-5 text-sm font-bold">
               Voyons ensemble comment en faire une vraie force pour votre marque.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="animate-ring bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white text-sm sm:text-base md:text-lg px-6 sm:px-5 md:px-8 py-2.5 sm:py-3 md:py-4 hover:scale-105 hover:shadow-2xl transition-all font-bold group w-full sm:w-auto rounded-full"
+                  className="animate-ring bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white text-sm sm:text-base md:text-lg px-4 sm:px-4 md:px-5 py-2 sm:py-2 md:py-2.5 hover:scale-105 hover:shadow-2xl transition-all font-bold group w-full sm:w-auto rounded-full"
                 >
                   Contactez-Nous
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -214,7 +214,7 @@ export default function Home() {
               </a>
               <div className="flex flex-row items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base text-zinc-100 font-medium px-2">
                 <Clock className="w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5 flex-shrink-0" />
-                <span className="text-left whitespace-nowrap">Seulement 6 places par mois - passez à l'action !</span>
+                <span className="text-left whitespace-nowrap mx-px">Seulement 5 places par mois - passez à l&#39;action !</span>
               </div>
             </div>
           </div>
@@ -261,10 +261,10 @@ export default function Home() {
                     <span className="text-cyan-400 font-bold text-[10px] sm:text-base md:text-lg">1</span>
                   </div>
                   <div>
-                    <h5 className="text-[9px] sm:text-sm md:text-lg font-bold text-zinc-100 mb-0.5 sm:mb-1">
+                    <h5 className="sm:text-sm font-bold text-zinc-100 mb-0.5 sm:mb-1 md:text-xl">
                       Engagement explosif
                     </h5>
-                    <p className="text-[7px] sm:text-xs md:text-sm text-zinc-400 leading-tight">
+                    <p className="sm:text-xs text-zinc-400 leading-tight md:text-base">
                       Les vidéos sont partagées 12× plus que les textes ou images.
                     </p>
                   </div>
@@ -275,10 +275,10 @@ export default function Home() {
                     <span className="text-cyan-400 font-bold text-[10px] sm:text-base md:text-lg">2</span>
                   </div>
                   <div>
-                    <h5 className="text-[9px] sm:text-sm md:text-lg font-bold text-zinc-100 mb-0.5 sm:mb-1">
+                    <h5 className="font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-xl">
                       Conversion directe
                     </h5>
-                    <p className="text-[7px] sm:text-xs md:text-sm text-zinc-400 leading-tight">
+                    <p className="sm:text-xs text-zinc-400 leading-tight md:text-base">
                       Une vidéo peut augmenter vos ventes jusqu'à 80 %.
                     </p>
                   </div>
@@ -289,10 +289,10 @@ export default function Home() {
                     <span className="text-cyan-400 font-bold text-[10px] sm:text-base md:text-lg">3</span>
                   </div>
                   <div>
-                    <h5 className="text-[9px] sm:text-sm md:text-lg font-bold text-zinc-100 mb-0.5 sm:mb-1">
+                    <h5 className="font-bold text-zinc-100 mb-0.5 sm:mb-1 sm:text-xl">
                       Crédibilité instantanée
                     </h5>
-                    <p className="text-[7px] sm:text-xs md:text-sm text-zinc-400 leading-tight">
+                    <p className="text-zinc-400 leading-tight sm:text-base">
                       Les spectateurs retiennent 95 % du message en vidéo.
                     </p>
                   </div>
@@ -330,13 +330,13 @@ export default function Home() {
                 className={`p-4 sm:p-6 md:p-8 bg-zinc-900 border-zinc-800 hover:border-zinc-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group transform ${valueInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{ transitionDelay: valueInView ? `${item.delay}ms` : "0ms" }}
               >
-                <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-zinc-50" />
+                <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform text-center">
+                  <item.icon className="w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-zinc-50 text-center" />
                 </div>
-                <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 text-zinc-50 leading-tight">
+                <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 text-zinc-50 leading-tight text-center">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed">{item.description}</p>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed text-center">{item.description}</p>
               </Card>
             ))}
           </div>
@@ -631,8 +631,8 @@ export default function Home() {
                   className={`p-3 sm:p-8 bg-zinc-900/50 backdrop-blur-sm border-zinc-800 hover:border-zinc-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group transform ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                   style={{ transitionDelay: aboutInView ? `${item.delay}ms` : "0ms" }}
                 >
-                  <h3 className="text-sm sm:text-xl font-bold mb-1 sm:mb-2 text-zinc-50">{item.title}</h3>
-                  <p className="text-[10px] sm:text-base text-zinc-400">{item.description}</p>
+                  <h3 className="text-sm sm:text-xl font-bold mb-1 sm:mb-2 text-zinc-50 text-center">{item.title}</h3>
+                  <p className="text-[10px] sm:text-base text-zinc-400 text-center">{item.description}</p>
                 </Card>
               ))}
             </div>
@@ -678,7 +678,7 @@ export default function Home() {
               >
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20 font-bold group w-full sm:w-auto rounded-full text-sm sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5"
+                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white hover:text-white hover:scale-105 transition-all shadow-lg shadow-cyan-500/20 font-bold group w-full sm:w-auto rounded-full text-sm sm:text-lg md:text-xl px-4 sm:px-4 md:px-5 py-2 sm:py-2 md:py-2.5"
                 >
                   Discutons Votre Projet !
                 </Button>

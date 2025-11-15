@@ -70,18 +70,18 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-3 sm:px-4 py-1.5 sm:py-2 flex items-center justify-between gap-2 sm:gap-4">
           <Link
             href="/"
-            className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity flex-shrink-0"
+            className="flex items-center gap-1 sm:gap-2 text-white hover:text-cyan-400 transition-colors flex-shrink-0"
           >
             <ArrowLeft className="w-4 sm:w-5 h-4 sm:h-5" />
             <span className="text-xs sm:text-sm font-semibold hidden sm:inline">Retour</span>
           </Link>
 
-          <h1 className="text-base sm:text-xl font-bold flex-1 text-center px-2 truncate">Portefeuille</h1>
+          <h1 className="text-sm sm:text-xl md:text-6xl font-bold flex-1 text-center px-2 truncate">Portefeuille</h1>
 
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-            <Button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-3 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm hover:scale-110 transition-all">
-              <span className="hidden sm:inline">Contactez-Nous</span>
-              <span className="sm:hidden">Contact</span>
+            <Button 
+              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-2 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-sm hover:scale-110 transition-all">
+              Contactez-Nous
             </Button>
           </a>
         </div>
@@ -90,13 +90,13 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="pt-32 pb-12 sm:pb-24 bg-gradient-to-b from-zinc-900 to-zinc-950 relative overflow-hidden"
+        className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center pt-16 sm:pt-20"
       >
         <div className="absolute inset-0 z-0">
           <img
             src="/creative-video-production-studio.jpg"
             alt="Video production studio"
-            className="w-full h-full object-cover opacity-[0.02]"
+            className="w-full h-full object-cover opacity-[0.13]"
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -155,7 +155,7 @@ export default function PortfolioPage() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover opacity-[0.15]"
+            className="w-full h-full object-cover opacity-[0.25]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/80 to-zinc-950" />
         </div>
