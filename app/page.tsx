@@ -22,7 +22,7 @@ export default function Home() {
   const { ref: ctaRef, isInView: ctaInView } = useInView()
 
   const whatsappLink =
-    "https://wa.me/21628119128?text=Bonjour%2C%20je%20souhaite%20discuter%20avec%20vous%20de%20ma%20stratégie%20de%20contenu."
+    "https://wa.me/21628119128?text=Bonjour%2C%20je%20souhaite%20discuter%20avec%20vous%20à%20propos%20ma%20stratégie%20de%20contenu."
 
   const calendlyLink = "https://calendly.com/iyedferchichi394/30min"
 
