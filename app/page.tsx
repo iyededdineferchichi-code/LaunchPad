@@ -193,10 +193,10 @@ export default function Home() {
           <div
             className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <h1 className="text-3xl lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance sm:text-6xl md:text-9xl">
+            <h1 className="lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance sm:text-6xl md:text-9xl text-5xl">
               Renforcez Votre Marque, <span className="text-zinc-50">Faire Bouger Votre Business</span>
             </h1>
-            <p className="text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold text-base sm:text-2xl md:text-4xl">
+            <p className="text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold sm:text-2xl md:text-4xl text-2xl">
               Prêt à exploser vos résultats grâce à un contenu qui convertit vraiment ?
             </p>
             <p className="text-zinc-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-10 leading-5 font-bold text-xl md:text-3xl">
@@ -214,7 +214,7 @@ export default function Home() {
               </a>
               <div className="flex flex-row items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base text-zinc-100 font-medium px-2">
                 <Clock className="w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5 flex-shrink-0" />
-                <span className="whitespace-nowrap mx-px text-left tracking-tight text-xl">Seulement 5 places par mois - passez à l&#39;action !</span>
+                <span className="whitespace-nowrap mx-px text-left tracking-tight text-xs">Seulement 5 places par mois - passez à l&#39;action !</span>
               </div>
             </div>
           </div>
