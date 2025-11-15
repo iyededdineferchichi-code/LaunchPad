@@ -74,14 +74,14 @@ export default function PortfolioPage() {
             className="flex items-center gap-1 sm:gap-2 text-white hover:text-cyan-400 transition-colors flex-shrink-0"
           >
             <ArrowLeft className="w-4 sm:w-5 h-4 sm:h-5" />
-            <span className="text-xs sm:text-sm font-semibold hidden sm:inline">Retour</span>
+            <span className="text-xs sm:text-sm md:text-sm font-semibold hidden sm:inline">Retour</span>
           </Link>
 
-          <h1 className="text-sm sm:text-xl md:text-6xl font-bold flex-1 text-center px-2 truncate">Portefeuille</h1>
+          <h1 className="text-sm sm:text-xl md:text-2xl font-bold flex-1 text-center px-2 truncate">Portefeuille</h1>
 
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
             <Button 
-              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-2.5 sm:px-4 py-1 sm:py-1 text-[9px] sm:text-sm hover:scale-110 transition-all">
+              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-2.5 sm:px-4 py-1 sm:py-1 text-[9px] sm:text-sm md:text-sm hover:scale-110 transition-all">
               <span className="sm:hidden">Contact</span>
               <span className="hidden sm:inline">Contactez-Nous</span>
             </Button>
@@ -107,10 +107,10 @@ export default function PortfolioPage() {
               heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 text-balance text-zinc-50">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 text-balance text-zinc-50">
               Aperçu de Notre Portefeuille
             </h2>
-            <p className="text-base sm:text-lg text-zinc-400 text-pretty leading-relaxed">
+            <p className="text-base sm:text-lg md:text-lg text-zinc-400 text-pretty leading-relaxed px-4 sm:px-6 md:px-8">
               Découvrez quelques projets que nous avons réalisés. Chaque vidéo représente notre engagement envers la
               qualité, la créativité et l'impact.
             </p>
@@ -169,7 +169,7 @@ export default function PortfolioPage() {
               Prêt à transformer votre contenu ?
             </h2>
             <p
-              className={`text-base sm:text-xl text-zinc-400 mb-6 sm:mb-10 text-pretty leading-relaxed transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`text-base sm:text-xl md:text-xl text-zinc-400 mb-6 sm:mb-10 text-pretty leading-relaxed transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: ctaInView ? "100ms" : "0ms" }}
             >
               Parlons de votre projet et découvrez comment nous pouvons créer des vidéos qui captent l'attention et
@@ -182,7 +182,7 @@ export default function PortfolioPage() {
               className={`inline-block transition-all duration-1000 ${ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: ctaInView ? "200ms" : "0ms" }}
             >
-              <Button className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 transition-all font-bold shadow-2xl rounded-full">
+              <Button className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white text-base sm:text-lg md:text-lg px-6 sm:px-10 py-4 sm:py-6 hover:scale-105 transition-all font-bold shadow-2xl rounded-full">
                 Discutons Votre Projet !
               </Button>
             </a>
@@ -198,15 +198,15 @@ export default function PortfolioPage() {
               <img src="/logo-new.jpg" alt="Content Craft" className="h-8 w-auto" />
               <div className="flex flex-col leading-none">
                 <div className="flex flex-row items-baseline gap-1">
-                  <div className="text-xs font-black text-white">CONTENT</div>
-                  <div className="text-xs font-bold text-zinc-100">CRAFT</div>
+                  <div className="text-xs sm:text-xs md:text-xs font-black text-white">CONTENT</div>
+                  <div className="text-xs sm:text-xs md:text-xs font-bold text-zinc-100">CRAFT</div>
                 </div>
-                <div className="text-[10px] text-zinc-400 tracking-wider">
+                <div className="text-[10px] sm:text-[10px] md:text-[10px] text-zinc-400 tracking-wider">
                   VIDEO <span className="text-cyan-500">•</span> EDITING
                 </div>
               </div>
             </div>
-            <p className="text-xs sm:text-sm text-zinc-400">© 2025 Content Craft. Tous droits réservés.</p>
+            <p className="text-xs sm:text-sm md:text-sm text-zinc-400">© 2025 Content Craft. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
