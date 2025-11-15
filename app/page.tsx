@@ -247,12 +247,6 @@ export default function Home() {
           </div>
 
           <div className="mt-4 sm:mt-6">
-            <div className="mb-3 sm:mb-6 text-center">
-              <h4 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold tracking-wide text-white">
-                Présentation du LaunchPad
-              </h4>
-            </div>
-
             <div className="flex flex-row items-center justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-12">
               <div className="relative group flex-shrink-0 w-[120px] sm:w-[240px] md:w-[300px] lg:w-[360px]">
                 <div className="aspect-[9/16] overflow-hidden rounded-xl border-2 border-zinc-800 bg-zinc-950 transition-all duration-300 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] hover:border-cyan-500/50">

@@ -6,7 +6,7 @@ import { LoadingSpinner } from "@/components/loading-spinner"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { useInView } from "@/hooks/use-in-view"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft } from 'lucide-react'
 
 export default function PortfolioPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -29,7 +29,7 @@ export default function PortfolioPage() {
 
   const calendlyLink = "https://calendly.com/iyedferchichi394/30min"
 
-  const portfolioVideos = [
+  const videos = [
     {
       title: "Miro App",
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Miro%20App-Yh64lG4gLmb0PCyZPHBNcjakTixKCE.mp4",
@@ -51,13 +51,13 @@ export default function PortfolioPage() {
       description: "Émotion et authenticité au cœur du message",
     },
     {
-      title: "Faculty Hustle",
+      title: "Faculty hustle",
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Faculty%20hustle-gc2AmNFj1O90wA5jsd4ioJhUss85B7.mp4",
       description: "Édition vidéo professionnelle de haut niveau",
     },
     {
-      title: "Trust",
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trust-XSDipa4B7foruzps3zDlZZZWkpiI7j.mp4",
+      title: "Chris 1",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Chris%20Style%201-RlD0UIQpw2LSJsvIxVn3aW266rnp0B.mp4",
       description: "Montage créatif et innovant",
     },
   ]
@@ -127,7 +127,7 @@ export default function PortfolioPage() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
-            {portfolioVideos.map((video, index) => (
+            {videos.map((video, index) => (
               <div
                 key={index}
                 className={`group relative overflow-hidden rounded-xl border-2 border-zinc-800 aspect-[9/16] transition-all duration-200 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] hover:border-cyan-500/50 transform ${gridInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
