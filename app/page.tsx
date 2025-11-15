@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { CheckCircle2, Zap, Target, TrendingUp, Video, Sparkles, Users, Clock, ArrowRight, Menu, X } from "lucide-react"
+import { CheckCircle2, Zap, Target, TrendingUp, Video, Sparkles, Users, Clock, ArrowRight, Menu, X } from 'lucide-react'
 import { useEffect, useState } from "react"
 import { LoadingSpinner } from "@/components/loading-spinner"
 import { useInView } from "@/hooks/use-in-view"
@@ -378,7 +378,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 items-stretch">
               {[
                 {
                   icon: Sparkles,
