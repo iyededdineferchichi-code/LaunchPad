@@ -193,7 +193,7 @@ export default function Home() {
           <div
             className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <h1 className="text-3xl lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance md:text-7xl sm:text-6xl">
+            <h1 className="text-3xl lg:text-7xl font-bold leading-tight tracking-tight mb-4 sm:mb-8 text-balance sm:text-6xl md:text-8xl">
               Renforcez Votre Marque, <span className="text-zinc-50">Faire Bouger Votre Business</span>
             </h1>
             <p className="md:text-2xl text-zinc-200 max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4 font-bold text-base sm:text-2xl">
