@@ -18,7 +18,6 @@ export default function Home() {
   const { ref: valueRef, isInView: valueInView } = useInView()
   const { ref: servicesRef, isInView: servicesInView } = useInView()
   const { ref: processRef, isInView: processInView } = useInView()
-  const { ref: aboutRef, isInView: aboutInView } = useInView()
   const { ref: ctaRef, isInView: ctaInView } = useInView()
 
   const whatsappLink =
@@ -36,7 +35,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "services", "portfolio", "process", "about", "video"]
+      const sections = ["hero", "services", "portfolio", "process", "video"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -88,7 +87,6 @@ export default function Home() {
               { id: "services", label: "Offre" },
               { id: "portfolio", label: "Portefeuille", href: "/portfolio" },
               { id: "process", label: "Démarche" },
-              { id: "about", label: "À propos" },
             ].map((item) => (
               <button
                 key={item.id}
@@ -139,7 +137,6 @@ export default function Home() {
                 { id: "services", label: "Offre" },
                 { id: "portfolio", label: "Portefeuille", href: "/portfolio", smallText: true },
                 { id: "process", label: "Démarche" },
-                { id: "about", label: "À propos" },
               ].map((item) => (
                 <button
                   key={item.id}
@@ -568,80 +565,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About */}
-      <section
-        id="about"
-        ref={aboutRef}
-        className="py-8 sm:py-24 bg-gradient-to-b from-zinc-900 to-zinc-950 relative overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/professional-video-editor-workspace-tools.jpg"
-            alt="Video editing workspace"
-            className="w-full h-full object-cover opacity-[0.02]"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-6 sm:mb-12">
-              <h2
-                className={`text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-balance text-zinc-50 transition-all duration-1000 md:text-6xl ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              >
-                À propos
-              </h2>
-              <div className="space-y-3 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed">
-                <p
-                  className={`text-pretty text-zinc-300 transition-all duration-1000 ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                  style={{ transitionDelay: aboutInView ? "100ms" : "0ms" }}
-                >
-                  Nous combinons créativité et méthode pour produire des vidéos claires, fluides et alignées avec votre
-                  message. Chaque montage est pensé pour capter l'attention, renforcer votre identité et créer de
-                  l'impact.
-                </p>
-                <p
-                  className={`text-pretty text-zinc-400 transition-all duration-1000 ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                  style={{ transitionDelay: aboutInView ? "200ms" : "0ms" }}
-                >
-                  Notre approche repose sur trois piliers : la <strong className="text-zinc-50">clarté</strong> dans la
-                  communication, la <strong className="text-zinc-50">fiabilité</strong> dans les délais, et l'
-                  <strong className="text-zinc-50">impact</strong> dans chaque frame. Nous ne nous contentons pas de
-                  monter des vidéos — nous construisons des outils de croissance pour votre marque.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-2 sm:gap-6">
-              {[
-                {
-                  title: "Clarté",
-                  description: "Un message limpide qui résonne avec votre audience.",
-                  delay: 300,
-                },
-                {
-                  title: "Fiabilité",
-                  description: "Des délais respectés et une communication transparente.",
-                  delay: 400,
-                },
-                {
-                  title: "Impact",
-                  description: "Du contenu qui génère des résultats mesurables.",
-                  delay: 500,
-                },
-              ].map((item, index) => (
-                <Card
-                  key={index}
-                  className={`p-3 sm:p-8 bg-zinc-900/50 backdrop-blur-sm border-zinc-800 hover:border-zinc-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group transform ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                  style={{ transitionDelay: aboutInView ? `${item.delay}ms` : "0ms" }}
-                >
-                  <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-zinc-50 text-center">{item.title}</h3>
-                  <p className="text-[10px] sm:text-sm md:text-base text-zinc-400 text-center">{item.description}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA Section */}
       <section ref={ctaRef} className="py-12 sm:py-32 bg-zinc-950 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -680,7 +603,7 @@ export default function Home() {
               >
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold rounded-full px-6 sm:px-8 md:px-10 py-1.5 text-sm sm:text-lg md:text-xl"
+                  className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold rounded-full px-8 sm:px-10 md:px-12 py-1.5 text-sm sm:text-lg md:text-xl"
                 >
                   Discutons Votre Projet !
                 </Button>
@@ -693,7 +616,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-zinc-700 hover:border-cyan-500 text-zinc-50 bg-zinc-900 hover:bg-zinc-800 rounded-full px-4 sm:px-6 md:px-8 py-1.5 text-sm sm:text-lg md:text-xl"
+                  className="border-2 border-zinc-700 hover:border-cyan-500 text-zinc-50 bg-zinc-900 hover:bg-zinc-800 rounded-full px-5 sm:px-7 md:px-9 py-1.5 text-sm sm:text-lg md:text-xl"
                 >
                   Découvrir Notre Portefeuille
                 </Button>

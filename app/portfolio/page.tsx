@@ -60,6 +60,16 @@ export default function PortfolioPage() {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Chris%20Style%201-RlD0UIQpw2LSJsvIxVn3aW266rnp0B.mp4",
       description: "Montage créatif et innovant",
     },
+    {
+      title: "Wealth",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Wealth-HCiwacfE5TuNElrXX12RTRZvPtOqY1.mp4",
+      description: "Montage professionnel avec transitions fluides",
+    },
+    {
+      title: "Indian Companies",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Indian%20Companies-kp0KtO3MQHhriGtDRWImv271nbkgeX.mp4",
+      description: "Contenu optimisé pour la conversion",
+    },
   ]
 
   return (
