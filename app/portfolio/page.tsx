@@ -70,6 +70,11 @@ export default function PortfolioPage() {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Indian%20Companies-kp0KtO3MQHhriGtDRWImv271nbkgeX.mp4",
       description: "Contenu optimisé pour la conversion",
     },
+    {
+      title: "School",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/School-vLtefRA2u5SRkhTQC9TGVEkNA0brTu.mp4",
+      description: "Montage professionnel avec transitions fluides",
+    },
   ]
 
   return (
