@@ -6,7 +6,7 @@ import { LoadingSpinner } from "@/components/loading-spinner"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { useInView } from "@/hooks/use-in-view"
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft } from "lucide-react"
 
 export default function PortfolioPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -75,6 +75,11 @@ export default function PortfolioPage() {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/School-vLtefRA2u5SRkhTQC9TGVEkNA0brTu.mp4",
       description: "Montage professionnel avec transitions fluides",
     },
+    {
+      title: "Iphone",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Iphone-zEs2I2dajug28TGeqPnSj7rbyVsY6a.mp4",
+      description: "Montage professionnel avec transitions fluides",
+    },
   ]
 
   return (
@@ -95,8 +100,7 @@ export default function PortfolioPage() {
           <h1 className="text-sm sm:text-xl md:text-2xl font-bold flex-1 text-center px-2 truncate">Portefeuille</h1>
 
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-            <Button 
-              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-2.5 sm:px-4 py-1 sm:py-1 text-[9px] sm:text-sm md:text-sm hover:scale-110 transition-all">
+            <Button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full px-2.5 sm:px-4 py-1 sm:py-1 text-[9px] sm:text-sm md:text-sm hover:scale-110 transition-all">
               <span className="sm:hidden">Contact</span>
               <span className="hidden sm:inline">Contactez-Nous</span>
             </Button>
