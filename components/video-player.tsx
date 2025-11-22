@@ -48,6 +48,7 @@ export function VideoPlayer({ src, title, description }: VideoPlayerProps) {
           className="w-full h-full object-cover cursor-pointer"
           playsInline
           controls={false}
+          muted={false}
           onPlay={() => setShowControls(true)}
           onClick={handleVideoClick}
         />
@@ -58,6 +59,7 @@ export function VideoPlayer({ src, title, description }: VideoPlayerProps) {
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             playsInline
             preload="metadata"
+            muted
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/95 via-zinc-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm flex flex-col justify-center items-center">
             <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">

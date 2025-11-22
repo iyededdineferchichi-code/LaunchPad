@@ -80,6 +80,11 @@ export default function PortfolioPage() {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Iphone-zEs2I2dajug28TGeqPnSj7rbyVsY6a.mp4",
       description: "Montage professionnel avec transitions fluides",
     },
+    {
+      title: "Mr Beast",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mr%20Beast-mDxHbDyRxkv1OUZL1KCOURkFu5sQZo.mp4",
+      description: "Montage professionnel avec transitions fluides",
+    },
   ]
 
   return (
